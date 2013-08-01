@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController <CLLocationManagerDelegate>
+- (IBAction)startTrackingLocation:(id)sender;
+- (IBAction)stopTrackingLocation:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextView *textField;
+@property (strong, nonatomic)CLLocationManager* locationManager;
 
 @end
