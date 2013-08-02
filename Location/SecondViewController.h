@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface SecondViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextView *textField;
+@property (nonatomic,strong)CLGeocoder* geocoder;
+@property (nonatomic,strong) CLLocationManager* locationManager;
+- (IBAction)getGeocodeButtonPressed:(id)sender;
 
 @end
